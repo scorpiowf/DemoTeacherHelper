@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var dojoConfig = {
+				parseOnLoad:true,
+				isDebug:false
+			};
+		</script>
+		<script src="../dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+		<link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"></link>
+		<link rel="stylesheet" href="../dojo/dojo/resources/dojo.css"></link>
+		<link rel="stylesheet" href="../dojo/dojox/grid/resources/claroGrid.css"></link>
+		<link rel="stylesheet" href="demo.css"></link>
+		<script type="text/javascript">
+		dojo.require("dojox.grid.DataGrid");
+		dojo.require("dojo.data.ItemFileWriteStore");
+
+		dojo.ready(function(){
+		    /*set up data store*/
+		    var data = {
+		      identifier: 'id',
+		      items: []
+		    };
+		    var data_list = [
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '选择题', col5:4},
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '选择题', col5:4},
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '简答题', col5:13},
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '简答题', col5:11},
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '简答题', col5:12},
+		      { col1: "3", col2: '数学', col3: '期末考', col4: '简答题', col5:13}
+		    ];
+		    var rows = 60;
+		    for(var i=0, l=data_list.length; i<rows; i++){
+		      data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+		    }
+		    var store = new dojo.data.ItemFileWriteStore({data: data});
+
+		    /*set up layout*/
+		    var layout = [[
+		      {'name': '序号', 'field': 'id', 'width': '10%'},
+		      {'name': '科目', 'field': 'col2', 'width': '20%'},
+		      {'name': '类型', 'field': 'col3', 'width': '25%'},
+		      {'name': '题目类型', 'field': 'col4', 'width': '25%'},
+		      {'name': '分值', 'field': 'col5', 'width': '20%'}
+		    ]];
+
+		    /*create a new grid:*/
+		    var grid = new dojox.grid.DataGrid({
+		        id: 'grid',
+		        store: store,
+		        structure: layout,
+		        rowSelector: '20px'},
+		      document.createElement('div'));
+
+		    /*append the new grid to the div*/
+		    dojo.byId("gridDiv").appendChild(grid.domNode);
+
+		    /*Call startup() to render the grid*/
+		    grid.startup();
+		});
+		</script>
+		<style>
+		#grid {
+			    width: 100%;
+			    height: 10em;
+			    margin-right: 30px;
+			    margin-bottom: 50px;
+			}
+		</style>	
+	</head>
+	<body class="claro">
+		<div class="maindiv">
+			<div class="title">Teacher Helper Demo - 题目确认</div>
+			<div id="gridDiv"></div>
+			<div>
+				<div class="field">
+					<label for="subject">科目：</label>
+					<label><b>数学</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">年级：</label>
+					<label><b>七年级</b></label>
+				</div>
+				<div class="field">
+					<label for="examName">单元：</label>
+					<label><b>第一学期期末考</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">类型：</label>
+					<label><b>期末考</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">题目类型：</label>
+					<label><b>简答题</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">分值：</label>
+					<label><b>13分</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">知识点:</label>
+					<label><b>代数数列，不等式</b></label>
+				</div>
+				<div class="field">
+					<label>题目描述:</label><br/>
+					<label><b>求证,当n>20时，斐波那契数列的第n项大于2^n</b></label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

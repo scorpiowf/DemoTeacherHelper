@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var dojoConfig = {
+			parseOnLoad:true,
+			isDebug:false
+		};
+	</script>
+<script src="../dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+		<link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"></link>
+		<link rel="stylesheet" href="../dojo/dojo/resources/dojo.css"></link>
+		<link rel="stylesheet" href="../dojo/dojox/grid/resources/claroGrid.css"></link>
+		<link rel="stylesheet" href="demo.css"></link>
+		
+	</head>
+	<body class="claro">
+		<div class="maindiv">
+			<div class="title">Teacher Helper Demo - 题目录入</div>
+			<div class="field">
+				<label for="subject">科目</label>
+				<select name="subject" data-dojo-type="dijit/form/Select" style="width:200px;">
+					<option value="CH">语文</option>
+					<option value="MA">数学</option>
+					<option value="EN">英语</option>
+				</select>
+			</div>
+			<br/>
+			<div class="field">
+				<label for="subject">年级</label>
+				<select name="subject" data-dojo-type="dijit/form/Select" style="width:200px;">
+					<option value="C7">七年级</option>
+					<option value="C8">八年级</option>
+					<option value="C9">九年级</option>
+				</select>
+			</div>
+			<br/>
+			<div class="field">
+				<label for="examName">单元</label>
+				<input data-dojo-type="dijit/form/TextBox" placeholder="请输入单元" id="examName" name="examName" value="" />
+			</div>
+			<br/>
+			<div class="field">
+				<label for="subject">类型</label>
+				<select name="subject" data-dojo-type="dijit/form/Select" style="width:200px;">
+					<option value="C7">测验</option>
+					<option value="C8">月考</option>
+					<option value="C9">模拟考</option>
+				</select>
+			</div>
+			<div class="field">
+				<button data-dojo-type="dijit/form/Button" label="开始录入"></button>
+			</div>
+		</div>
+		
+		<div style="height:200px;"></div>
+		
+	</body>
+</html>

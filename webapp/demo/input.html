@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var dojoConfig = {
+			parseOnLoad:true,
+			isDebug:false
+		};
+	</script>
+		<script src="../dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+		<link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"></link>
+		<link rel="stylesheet" href="../dojo/dojo/resources/dojo.css"></link>
+		<link rel="stylesheet" href="../dojo/dojox/grid/resources/claroGrid.css"></link>
+		<link rel="stylesheet" href="demo.css"></link>	
+	</head>
+	<body class="claro">
+		<div class="maindiv">
+			<div class="title">Teacher Helper Demo - 题目录入</div>		
+			
+				<div class="field">
+					<label for="subject">科目：</label>
+					<label>语文</label>
+				</div>
+				<div class="field">
+					<label for="subject">年级：</label>
+					<label>七年级</label>
+				</div>
+				<div class="field">
+					<label for="examName">单元：</label>
+					<label>我的第一单元</label>
+				</div>
+				<div class="field">
+					<label for="subject">类型：</label>
+					<label>模拟考</label>
+				</div>
+				<br/>
+				
+				<div class="field">
+					<label>分值</label>
+					<input data-dojo-type="dijit/form/TextBox" placeholder="请输入分值"/>
+				</div>
+				<div class="field">
+					<label for="subject">题目类型</label>
+					<select name="subject" data-dojo-type="dijit/form/Select" style="width:200px;">
+						<option value="C7">选择题</option>
+						<option value="C8">填空题</option>
+						<option value="C9">主观题</option>
+					</select>
+				</div>
+				<div class="field">
+					<label>知识点<span style="font-size:8;">&#160;(用逗号隔开)</span></label><br/>
+					<input data-dojo-type="dijit/form/TextBox" placeholder="请输入知识点"/>
+				</div>
+				<div class="field">
+					<input data-dojo-type="dijit/form/SimpleTextarea"
+					data-dojo-props="cols:60, rows:10" value="请以任意话题写一篇任意字数的议论文。"/>
+				</div>
+				<div class="field">
+					<button data-dojo-type="dijit/form/Button" label="返回"></button>
+					<button data-dojo-type="dijit/form/Button" label="保存并下一题"></button>
+					<button data-dojo-type="dijit/form/Button" label="完成"></button>
+				</div>
+			</div>
+	</body>
+</html>

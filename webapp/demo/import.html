@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var dojoConfig = {
+			parseOnLoad:true,
+			isDebug:false
+		};
+	</script>
+		<script src="../dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+		<link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"></link>
+		<link rel="stylesheet" href="../dojo/dojo/resources/dojo.css"></link>
+		<link rel="stylesheet" href="../dojo/dojox/grid/resources/claroGrid.css"></link>
+		<link rel="stylesheet" href="demo.css"></link>
+		
+	</head>
+	<body class="claro">
+		<div class="maindiv">
+			<div class="title">Teacher Helper Demo - 文件导入</div>		
+		
+			<div class="field">
+				<label for="subject">文件类型</label>
+				<select name="subject" data-dojo-type="dijit/form/Select" style="width:200px;">
+					<option value="CH">XML(*.xml)</option>
+					<option value="MA">Excel(*.xls, *.xlsx)</option>
+				</select>
+			</div>
+			<br/>
+			<div class="field">
+				<label for="subject">选择文件</label>
+				<input name="subject" data-dojo-type="dojox/form/Uploader" label="浏览" style="width:200px;"></input>
+			</div>
+			<div class="field">
+				<label style="font-size:14">已选择:</label>
+				<label style="font-size:14;font-weight:bold;">2015_七年级数学期末考试.xls</label>
+			</div>
+			
+			<br/>
+			<div class="field">
+				<button data-dojo-type="dijit/form/Button" label="上传"></button>
+			</div>
+			<br/>
+		</div>		
+	</body>
+</html>

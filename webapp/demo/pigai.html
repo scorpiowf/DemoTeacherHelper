@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		var dojoConfig = {
+			parseOnLoad:true,
+			isDebug:false
+		};
+	</script>
+		<script src="../dojo/dojo/dojo.js" djConfig="parseOnLoad: true, isDebug: false"></script>
+		<link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"></link>
+		<link rel="stylesheet" href="../dojo/dojo/resources/dojo.css"></link>
+		<link rel="stylesheet" href="../dojo/dojox/grid/resources/claroGrid.css"></link>
+		<link rel="stylesheet" href="demo.css"></link>	
+	</head>
+	<body class="claro">
+		<div class="maindiv">
+			<div class="title">Teacher Helper Demo - 批改</div>
+			<div id="gridDiv"></div>
+			<div>
+				<div class="field">
+					<label for="subject">科目：</label>
+					<label><b>数学</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">年级：</label>
+					<label><b>七年级</b></label>
+				</div>
+				<div class="field">
+					<label for="examName">单元：</label>
+					<label><b>第一学期期末考</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">类型：</label>
+					<label><b>期末考</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">题目类型：</label>
+					<label><b>简答题</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">分值：</label>
+					<label><b>13分</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">知识点:</label>
+					<label><b>代数数列，不等式</b></label>
+				</div>
+				<div class="field">
+					<label for="subject">学生:</label>
+					<label>陈大文， 七年级，5班</label>
+				</div>
+				<div class="field">
+					<label>题目描述:</label><br/>
+					<label><b>求证,当n>20时，斐波那契数列的第n项大于2^n</b></label>
+				</div>
+				<div class="field">
+					<img src="./img/exam.png" />
+				</div>
+				<div class="field">
+					<label>你的打分：</label>
+					<input data-dojo-type="dijit/form/RadioButton" label="1分" /><label>1分</label>
+					<input data-dojo-type="dijit/form/RadioButton" label="2分" /><label>2分</label>
+					<input data-dojo-type="dijit/form/RadioButton" label="4分" /><label>4分</label>
+					<input data-dojo-type="dijit/form/RadioButton" label="5分" /><label>5分</label>
+					<input data-dojo-type="dijit/form/RadioButton" label="Other" /><label>其他</label>
+					<input data-dojo-type="dijit/form/TextBox" placeholder="请打分"/>
+				</div>
+				
+				<div class="field">
+					<button data-dojo-type="dijit/form/Button" label="返回"></button>
+					<button data-dojo-type="dijit/form/Button" label="保存并下一题"></button>
+					<button data-dojo-type="dijit/form/Button" label="完成"></button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
